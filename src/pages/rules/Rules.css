@@ -1,0 +1,21 @@
+.rule-container-title{
+    text-align:center;
+    padding:1rem;
+    text-decoration:underline;
+    text-underline-offset:8px; 
+}
+.rule-container{
+    margin:0rem auto;
+    width:40rem; 
+}
+.rule-btn-container{
+    text-align:center;
+    width:max-content;
+    padding:0.5rem;
+    font-size:1rem;
+    font-weight:600;
+    width: 100%; 
+}
+.rule-btn{
+margin: 0 auto;
+}
