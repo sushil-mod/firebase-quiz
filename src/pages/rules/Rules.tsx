@@ -1,15 +1,12 @@
 import { Button, Card, CardActions, CardContent, List, ListItem, ListItemText, Typography } from '@mui/material';
 import React from 'react'
 import { useParams } from 'react-router-dom';
-import { useAppDispatch, useAppSelector } from '../../app/hooks';
-import { getQuizQuestion } from '../../features/quiz/quizSlice';
-import { QuizType } from '../../features/quiz/quizSlice.type';
+import { useAppSelector } from '../../app/hooks';
 import './Rules.css';
 
 function Rules() {
 
     const { quizId } = useParams();   
-    const dispatch = useAppDispatch();
     const quizState = useAppSelector((state) => state.quiz) ;
     const { categories } = useAppSelector((state) => state.categoryList) ;
     console.log( "categories" ,categories );

@@ -1,7 +1,7 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import type { PayloadAction } from "@reduxjs/toolkit";
 import { CategoryInitialState, CategoryType } from "./categorySlice.type";
-import { collection, getDocs, query } from "firebase/firestore";
+import { collection, getDocs} from "firebase/firestore";
 import { db } from "../../firebase-config";
 
 

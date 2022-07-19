@@ -2,11 +2,9 @@
 import { Typography } from '@mui/material';
 import { Box } from '@mui/system';
 import React, { useEffect } from 'react'
-import { useNavigate } from 'react-router-dom';
 import { useAppDispatch, useAppSelector } from '../../app/hooks';
 import CategoryCard from '../../components/card/CategoryCard';
 import { getCategories } from '../../features/category/categorySlice';
-import { CategoryType } from '../../features/category/categorySlice.type';
 import './Home.css';
 
 
@@ -14,7 +12,7 @@ function Home() {
 
     const { categories } = useAppSelector((state) => state.categoryList)
     const dispatch = useAppDispatch();
-    const navigate = useNavigate();
+  
 
     useEffect(()=>{
         dispatch(getCategories());

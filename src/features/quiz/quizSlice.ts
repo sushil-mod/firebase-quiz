@@ -2,7 +2,7 @@ import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import { PayloadAction } from "@reduxjs/toolkit";
 import { doc, getDoc } from "firebase/firestore";
 import { db } from "../../firebase-config";
-import { QuestionAndAnswerType, QuizType } from "./quizSlice.type";
+import { QuizType } from "./quizSlice.type";
 
 
 /**
