@@ -24,11 +24,11 @@ export const getQuizQuestion = createAsyncThunk<QuizType,string,{rejectValue:str
 async (quizId,{rejectWithValue}):Promise<any> =>{
     try {
         const docSnap = await getDoc(doc(db,"quizzes",quizId))
-        console.log("response",docSnap.data());
+        
         return docSnap.data();
 
     } catch (error) {
-        console.log(error);
+        
         return rejectWithValue("No data");
     }
 }

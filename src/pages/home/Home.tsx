@@ -18,7 +18,7 @@ function Home() {
         dispatch(getCategories());
     },[dispatch])
 
-    console.log("categories",categories);
+  
 
   return (
     <Box className="home-container">

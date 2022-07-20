@@ -17,11 +17,11 @@ import './Rules.css';
 
     const { categories } = useAppSelector((state) => state.categoryList) ;
 
-    console.log( "categories" ,categories );
+  
 
     const id : string = quizId || "";
     const cat = categories.find((category)=>category.id === id ) ;
-    console.log( "selected category",cat ) ;
+    
     
     
    
@@ -42,7 +42,7 @@ import './Rules.css';
       dispatch(updateNextActiveQue());
       setSelectedOption("");
     }
-    console.log("que data",activeQuestion , categoryName , score , quizQuestions , selectedAnswer);
+   
     useEffect(()=>{
       dispatch(getCategories());
   },[dispatch])

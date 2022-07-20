@@ -7,7 +7,7 @@ function Result() {
 
     const {  activeQuestion , categoryName , score , quizQuestions , selectedAnswer } = useAppSelector((state)=>state.quiz)
 
-    console.log("data",activeQuestion , categoryName , score , quizQuestions , selectedAnswer )
+    
 
     const calTotalScore =()=>{
         var totalScore:number = 0 ;
@@ -19,7 +19,7 @@ function Result() {
         return totalScore ;
     }
 
-    console.log("totalScore",quizQuestions[0].answer,calTotalScore());
+    
 
   return (<>
     <Typography className='result-title' variant='h4' > Result For Pokemon Quiz </Typography>

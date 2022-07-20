@@ -7,7 +7,7 @@ import { useNavigate } from 'react-router-dom';
 function CategoryCard(Props : CategoryType) {
 
   const navigate = useNavigate();
-  console.log("Props",Props);
+
   const { categoryName,id ,image} = Props;
 
   return (
