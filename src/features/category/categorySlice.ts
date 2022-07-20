@@ -26,11 +26,9 @@ export const  getCategories = createAsyncThunk<CategoryType[],null|undefined,{re
 
         snapshots.forEach((doc)=>list.push({...doc.data(),id:doc.id} as CategoryType));
 
-        console.log("snapshots",snapshots);
-        console.log("list", list );
         return list as CategoryType[] ;
     } catch (error) {
-        console.log(error);
+      
         return rejectWithValue("No data");
 
     }

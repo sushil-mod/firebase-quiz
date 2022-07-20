@@ -16,7 +16,7 @@ const initialState : QuizType = {
     categoryName : "",
     quizQuestions : [] ,
     selectedAnswer : [] ,
-    activeQuestion : 0,
+    activeQuestion : -1,
     score : 0,
 }
 
@@ -24,11 +24,11 @@ export const getQuizQuestion = createAsyncThunk<QuizType,string,{rejectValue:str
 async (quizId,{rejectWithValue}):Promise<any> =>{
     try {
         const docSnap = await getDoc(doc(db,"quizzes",quizId))
-        console.log("response",docSnap.data());
+        
         return docSnap.data();
 
     } catch (error) {
-        console.log(error);
+        
         return rejectWithValue("No data");
     }
 }
@@ -38,7 +38,14 @@ async (quizId,{rejectWithValue}):Promise<any> =>{
 export const quizSlice = createSlice({
     name:'quiz',
     initialState,
-    reducers:{},
+    reducers:{
+        updateNextActiveQue:(state)=>{
+            state.activeQuestion = state.activeQuestion + Number(1);
+        },
+        updateSelectedAnswer:(state,action:PayloadAction<string | "">)=>{
+            state.selectedAnswer = [...state.selectedAnswer,action.payload] ;
+        }
+    },
     extraReducers:{
         [getQuizQuestion.pending.toString()]:(state)=>{
            
@@ -56,5 +63,5 @@ export const quizSlice = createSlice({
     },
 })
 
-
+export const { updateNextActiveQue ,updateSelectedAnswer } = quizSlice.actions;
 export default quizSlice.reducer;

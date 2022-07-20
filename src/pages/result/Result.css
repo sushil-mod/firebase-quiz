@@ -1,0 +1,46 @@
+.result-title{
+    text-align:center;
+    padding:1rem;
+    text-decoration:underline;
+    text-underline-offset:8px;
+}
+.result-paper-container{
+    display:flex;
+    justify-content: center;
+    width: 100%;
+}
+.result-paper{
+    font-size:1.5rem;
+    padding:10px;
+    text-align:center;
+}
+
+.result-container{
+    display:flex;
+    flex-direction:column;
+    width:40%;
+    justify-content:center;
+    gap:1rem;
+    margin:0rem auto;
+}
+.result-paper-que{
+    font-size:1.5rem;
+    padding:0.5rem;
+    text-align:center;
+}
+.result-paper-question{
+    display: flex;
+    gap: 0.5rem;
+}
+.result-option{
+    font-size:1.5rem;
+    text-align:center;
+}
+.result-success{
+    background-color: green! important ;
+    color: white! important ;
+}
+.result-error{
+    background-color: red! important ;
+    color: white! important;
+}
