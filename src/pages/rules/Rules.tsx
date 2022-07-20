@@ -13,7 +13,7 @@ import './Rules.css';
     const { quizId } = useParams();   
     const [ selectedOption , setSelectedOption ] = useState<string | "">("")
 
-    const { activeQuestion , categoryName , score , quizQuestions , selectedAnswer  } = useAppSelector( (state)=>state.quiz );
+    const { activeQuestion , categoryName ,  quizQuestions  } = useAppSelector( (state)=>state.quiz );
 
     const { categories } = useAppSelector((state) => state.categoryList) ;
 

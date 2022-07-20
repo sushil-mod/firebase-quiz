@@ -5,7 +5,7 @@ import './Result.css';
 
 function Result() {
 
-    const {  activeQuestion , categoryName , score , quizQuestions , selectedAnswer } = useAppSelector((state)=>state.quiz)
+    const {  quizQuestions , selectedAnswer } = useAppSelector((state)=>state.quiz)
 
     
 
