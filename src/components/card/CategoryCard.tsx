@@ -10,7 +10,6 @@ function CategoryCard(Props : CategoryType) {
   console.log("Props",Props);
   const { categoryName,id ,image} = Props;
 
-
   return (
     <Card className='category-card-container' >
         <img className='category-card-img' src={image.srcURL} alt={image.altText} />
@@ -18,7 +17,7 @@ function CategoryCard(Props : CategoryType) {
             <div className='text-overlay' >
                 <Typography variant='h4' className='category-title'>{ categoryName }</Typography>
                 <CardActions className='overlay-btn' >
-                <Button onClick={ ()=>navigate(`/quiz/${id}`) }  className='play-btn' variant='contained' size='medium' color="primary"> Play Quiz </Button>
+                <Button onClick={ ()=>navigate(`/quiz/${id}`,{ replace: true }) }  className='play-btn' variant='contained' size='medium' color="primary"> Play Quiz </Button>
                 </CardActions>
             </div>
         </div>
